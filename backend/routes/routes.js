@@ -18,9 +18,11 @@ router.post('/signup',(req,res) => {
 
     signedUpUser.save()
     .then(data=>{
+        console.log('success: '+data);
         res.json(data)
     })
     .catch(error => {
+        console.log('failure: '+error);
         res.json(error);
     });
 
